@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox fx:id="mainView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="115.0" prefWidth="356.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.polsl.controller.MainScreenController">
+   <children>
+      <Button fx:id="openDataSetButton" mnemonicParsing="false" onAction="#onClickOpenDataSetButton" prefHeight="115.0" prefWidth="178.0" text="Open dataset" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="statisticsButton" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClickStatisticsButton" prefHeight="115.0" prefWidth="178.0" text="Statistics">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
+</HBox>
