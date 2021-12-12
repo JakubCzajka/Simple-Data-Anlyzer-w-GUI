@@ -11,7 +11,7 @@ import java.util.Vector;
  * Interface for datasets.
  *
  * @author Jakub Czajka
- * @version 1.12
+ * @version 1.13
  */
 public interface DataSet {
     /**
@@ -30,11 +30,36 @@ public interface DataSet {
     String openCSV(String fileName, boolean embeddedLabels, String delimiter, int timeStampIndex) throws IOException, DatasetFileOpenException;
 
     @SuppressWarnings("BooleanMethodIsAlwaysInverted")
+    /**
+     * Method that returns state of dataset.
+     *
+     * @return true if dataset is open, false otherwise.
+     */
     boolean isOpen();
 
+    /**
+     * Getter of all dataset field names.
+     *
+     * @return Vector of field names.
+     * @throws DataSetNotOpenedException When user tries to access dataset that is not opened.
+     */
     Vector<String> getFieldNames() throws DataSetNotOpenedException;
 
+    /**
+     * Method that creates opy of all values in a numeric field.
+     *
+     * @param fieldName Name of the field.
+     * @return Vector containing field values.
+     * @throws NoFieldFoundException When user passes invalid fieldName
+     * @throws DataSetNotOpenedException When user tries to access dataset that is not opened.
+     */
     Vector<Double> getFieldCopy(String fieldName) throws NoFieldFoundException, DataSetNotOpenedException;
 
+    /**
+     * Method that returns copy of timestamp field.
+     *
+     * @return Vector containing all timestamps from timestamp field.
+     * @throws DataSetNotOpenedException When user tries to access dataset that is not opened.
+     */
     Vector<Instant> getTimeStampsCopy() throws DataSetNotOpenedException;
 }

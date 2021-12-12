@@ -13,25 +13,54 @@ import pl.polsl.model.basicmodel.BasicDataSetManipulator;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * Base class for all controllers in this project.
+ *
+ * @version 1.3
+ */
 @SuppressWarnings("ClassEscapesDefinedScope")
 public class DataSetController {
+    /**
+     * User DataSet
+     * @see DataSet
+     */
     protected DataSet dataSet;
+    /**
+     * DataSetManipulator used to perform operations on dataSet
+     */
     protected DataSetManipulator dataSetManipulator;
+    /**
+     * Program window
+     */
     protected Stage stage;
 
 
+    /**
+     * Basic setter for dataSet and dataSetManipulator.
+     *
+     * @param dataSet User DataSet. If null, an empty BasicDataSet is created.
+     * @param dataSetManipulator Chosen DataSetManipulator. If null, BasicDataSetManipulator.
+     */
     public void setDataSet(DataSet dataSet, DataSetManipulator dataSetManipulator) {
         this.dataSet = Objects.requireNonNullElseGet(dataSet, BasicDataSet::new);
         this.dataSetManipulator = Objects.requireNonNullElseGet(dataSetManipulator, BasicDataSetManipulator::new);
     }
 
+    /**
+     * Stage setter.
+     *
+     * @param stage Program window.
+     */
     public void setStage(Stage stage) {
         this.stage = stage;
     }
 
+    /**
+     * Method that switches active windows in program.
+     *
+     * @param fxmlPath Path to fxml that contains next active window.
+     */
     protected void switchToScene(String fxmlPath) {
-        stage.close();
-
         FXMLLoader fxmlLoader = new FXMLLoader(DataSetAnalyzerApplication.class.getResource(fxmlPath));
         try {
             Parent root = null;
@@ -55,8 +84,14 @@ public class DataSetController {
         stage.show();
     }
 
+    /**
+     * Method that shows a basic prompt and redirects user to next window.
+     *
+     * @param promptText Prompt text.
+     * @param buttonText Button text.
+     * @param nextSceneFxml Path to next window fxml file.
+     */
     protected void showPrompt(String promptText, String buttonText, String nextSceneFxml){
-        stage.close();
         FXMLLoader fxmlLoader = new FXMLLoader(DataSetAnalyzerApplication.class.getResource("prompt-view.fxml"));
 
         try {

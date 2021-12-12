@@ -1,0 +1,7 @@
+C:\Users\Kuba\Desktop\JWIUM\Data Analyzer\src\test\resources\knowndataset.csv,true,;,1,none
+C:\Users\Kuba\Desktop\JWIUM\Data Analyzer\src\test\resources\knowndatasetnolabels.csv,false,;,1,none
+C:\Users\Kuba\Desktop\JWIUM\Data Analyzer\src\test\resources\datasetwithredundandfieldnames.csv,true,;,1,DatasetFileOpenException
+C:\Users\Kuba\Desktop\JWIUM\Data Analyzer\src\test\resources\datasetwithincompleterecord.csv,true,;,1,DatasetFileOpenException
+C:\Users\Kuba\Desktop\JWIUM\Data Analyzer\src\test\resources\datasetwithtoobigrecord.csv,true,;,1,DatasetFileOpenException
+C:\Users\Kuba\Desktop\JWIUM\Data Analyzer\src\test\resources\abcd,true,;,1,IOException
+C:\Users\Kuba\Desktop\JWIUM\Data Analyzer\src\test\resources\knowndataset.csv,true,;,-1,DatasetFileOpenException

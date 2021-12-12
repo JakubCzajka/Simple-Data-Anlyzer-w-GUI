@@ -1,18 +1,21 @@
 package pl.polsl.model;
 
-import pl.polsl.model.basicmodel.BasicStatistics;
 import pl.polsl.model.exceptions.DataSetNotOpenedException;
 import pl.polsl.model.exceptions.NoFieldFoundException;
 
 import java.time.Instant;
 import java.util.Vector;
 
+/**
+ * Class that is used to perform various operations on DatSet object
+ */
 public interface DataSetManipulator {
     /**
      * Method that returns statistics for all fields in the dataset.
      *
      * @see Statistics
      *
+     * @param dataSet Data set to get statistics from.
      * @param from Beginning of the time period for the statistics default - Instant.MIN.
      * @param to End of the time period of the statistics default - Instant.MIN.
      * @return Vector of Statistics, each element represents different field
@@ -21,10 +24,11 @@ public interface DataSetManipulator {
     public Vector<Statistics> getStatistics(DataSet dataSet, Instant from, Instant to) throws DataSetNotOpenedException;
 
     /**
-     * Method that returns statistics for selected field in the dataset.
+     * Method that returns statistics for selected field in the dataset. If param from is after param to, they are switched.
      *
      * @see Statistics
      *
+     * @param dataSet Data set to get statistics from.
      * @param fieldName Name of the selected field.
      * @param from Beginning of the time period for the statistics default - Instant.MIN.
      * @param to End of the time period of the statistics default - Instant.MIN.

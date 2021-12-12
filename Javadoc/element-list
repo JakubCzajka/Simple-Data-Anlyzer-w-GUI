@@ -1,0 +1,6 @@
+module:pl.polsl
+pl.polsl
+pl.polsl.controller
+pl.polsl.model
+pl.polsl.model.basicmodel
+pl.polsl.model.exceptions

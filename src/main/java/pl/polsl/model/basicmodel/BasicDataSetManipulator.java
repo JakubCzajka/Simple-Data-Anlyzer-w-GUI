@@ -14,6 +14,8 @@ public class BasicDataSetManipulator implements DataSetManipulator {
     public Vector<Statistics> getStatistics(DataSet dataSet, Instant from, Instant to) throws DataSetNotOpenedException {
         if (!dataSet.isOpen())
             throw new DataSetNotOpenedException();
+
+
         Vector<Statistics> result = new Vector<Statistics>();
         try {
             Vector<String> fieldNames = dataSet.getFieldNames();
@@ -37,6 +39,13 @@ public class BasicDataSetManipulator implements DataSetManipulator {
             from = Instant.MIN;
         if (to == null)
             to = Instant.MAX;
+
+        if(from.isAfter(to))
+        {
+            Instant temp = from;
+            from = to;
+            to = temp;
+        }
 
 
         Vector<Double> fieldValues = dataSet.getFieldCopy(fieldName);

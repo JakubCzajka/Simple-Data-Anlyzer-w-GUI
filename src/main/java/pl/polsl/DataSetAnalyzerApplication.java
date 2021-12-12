@@ -12,11 +12,22 @@ import pl.polsl.model.basicmodel.BasicDataSetManipulator;
 
 import java.io.IOException;
 
+/**
+ * Main class of program.
+ *
+ * @version 1.2
+ */
 public class DataSetAnalyzerApplication extends Application {
+    /**
+     * Method that starts the first view in app.
+     *
+     * @param stage Program window.
+     * @throws IOException If it fails to load given fxml.
+     */
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(DataSetAnalyzerApplication.class.getResource("main-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 356, 115);
+        Scene scene = new Scene(fxmlLoader.load());
 
         DataSetController controller = fxmlLoader.getController();
         DataSet dataSet = new BasicDataSet();
@@ -30,6 +41,11 @@ public class DataSetAnalyzerApplication extends Application {
         stage.show();
     }
 
+    /**
+     * Method that launches the application.
+     *
+     * @param args Program arguments.
+     */
     public static void main(String[] args) {
         launch();
     }

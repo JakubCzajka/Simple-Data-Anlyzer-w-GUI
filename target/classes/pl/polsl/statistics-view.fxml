@@ -21,6 +21,14 @@
             </Button>
          </children>
       </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <CheckBox fx:id="startDateCheckBox" mnemonicParsing="false" prefHeight="31.0" prefWidth="73.0" text="Start date" />
+            <DatePicker fx:id="startDatePicker" disable="true" editable="false" />
+            <CheckBox fx:id="endDateCheckBox" mnemonicParsing="false" prefHeight="30.0" prefWidth="73.0" text="End date" />
+            <DatePicker fx:id="endDatePicker" disable="true" editable="false" />
+         </children>
+      </HBox>
       <TableView fx:id="statisticsTableView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" visible="false">
         <columns>
 

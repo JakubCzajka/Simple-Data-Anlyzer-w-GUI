@@ -8,31 +8,42 @@ import pl.polsl.model.DataSetManipulator;
 import java.io.IOException;
 
 
+/**
+ * Controller for main app view.
+ *
+ * @version 1.4
+ */
 @SuppressWarnings("ClassEscapesDefinedScope")
 public class MainViewController extends DataSetController {
 
+    /**
+     * Button that redirects to statistics' window.
+     */
     @FXML
     private Button statisticsButton;
 
     @Override
     public void setDataSet(DataSet dataSet, DataSetManipulator dataSetManipulator) {
         super.setDataSet(dataSet, dataSetManipulator);
-        this.setStatisticsAvailability();
-    }
 
-    @FXML
-    public void onClickOpenDataSetButton() throws IOException {
-        super.switchToScene("open-dataset-view.fxml");
-    }
-
-    @FXML
-    public void onClickStatisticsButton() throws IOException {
-        super.switchToScene("statistics-view.fxml");
-    }
-
-    private void setStatisticsAvailability() {
         if (dataSet == null) {
             statisticsButton.setDisable(true);
         } else statisticsButton.setDisable(!dataSet.isOpen());
+    }
+
+    /**
+     * Method that switches window to dataset opening window.
+     */
+    @FXML
+    public void onClickOpenDataSetButton() {
+        super.switchToScene("open-dataset-view.fxml");
+    }
+
+    /**
+     * Method that switches window to statistics' window.
+     */
+    @FXML
+    public void onClickStatisticsButton(){
+        super.switchToScene("statistics-view.fxml");
     }
 }

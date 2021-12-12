@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
  * Basic implementation od DataSet interface.
  *
  * @author Jakub Czajka
- * @version 1.6
+ * @version 1.7
  */
 public final class BasicDataSet implements DataSet {
     /**
@@ -147,10 +147,12 @@ public final class BasicDataSet implements DataSet {
 
     }
 
+
     @Override
     public boolean isOpen() {
         return opened;
     }
+
 
     @Override
     public Vector<String> getFieldNames() throws DataSetNotOpenedException {

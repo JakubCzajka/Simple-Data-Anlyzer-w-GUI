@@ -13,7 +13,7 @@
                   <Font size="17.0" />
                </font>
             </Label>
-            <TextField fx:id="pathTextField" prefHeight="42.0" prefWidth="468.0" text="C:\Users\Kuba\Desktop\TEMP_Studia\JwIiUM\Simple-Data-Analyzer\src\test\resources\knowndataset.csv" />
+            <TextField fx:id="pathTextField" prefHeight="42.0" prefWidth="468.0" text=".\src\test\resources\knowndataset.csv" />
          </children>
       </HBox>
       <Separator orientation="VERTICAL" prefHeight="24.0" prefWidth="600.0" />
