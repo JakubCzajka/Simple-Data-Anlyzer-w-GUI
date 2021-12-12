@@ -11,7 +11,7 @@ import java.util.Vector;
  * @author Jakub Czajka
  * @version 1.7
  */
-final class BasicStatistics implements Statistics {
+public final class BasicStatistics implements Statistics {
     /**
      * Field name.
      */

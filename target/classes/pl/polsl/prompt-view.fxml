@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.polsl.controller.PromptViewController">
+   <children>
+      <TextArea fx:id="promptTextArea" editable="false" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="300.0" wrapText="true" />
+      <Button fx:id="promptButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="100.0" prefWidth="300.0" text="OK">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
+</VBox>

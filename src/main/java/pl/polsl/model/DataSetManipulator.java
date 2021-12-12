@@ -1,5 +1,6 @@
 package pl.polsl.model;
 
+import pl.polsl.model.basicmodel.BasicStatistics;
 import pl.polsl.model.exceptions.DataSetNotOpenedException;
 import pl.polsl.model.exceptions.NoFieldFoundException;
 
@@ -17,7 +18,7 @@ public interface DataSetManipulator {
      * @return Vector of Statistics, each element represents different field
      * @throws DataSetNotOpenedException if user tries to get statistics before successfully opening a dataset
      */
-    public Vector<Statistics> getStatistics(DataSet dataSet,Instant from, Instant to) throws DataSetNotOpenedException;
+    public Vector<Statistics> getStatistics(DataSet dataSet, Instant from, Instant to) throws DataSetNotOpenedException;
 
     /**
      * Method that returns statistics for selected field in the dataset.

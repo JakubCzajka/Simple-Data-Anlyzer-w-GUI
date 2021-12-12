@@ -7,9 +7,7 @@ import pl.polsl.model.exceptions.DataSetNotOpenedException;
 import pl.polsl.model.exceptions.NoFieldFoundException;
 
 import java.time.Instant;
-import java.util.List;
 import java.util.Vector;
-import java.util.stream.Collectors;
 
 public class BasicDataSetManipulator implements DataSetManipulator {
     @Override

@@ -2,10 +2,36 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.polsl.controller.OpenDatasetViewController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="117.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.polsl.controller.OpenDatasetViewController">
    <children>
-      <ToggleButton mnemonicParsing="false" text="ToggleButton" />
+      <HBox prefHeight="42.0" prefWidth="600.0">
+         <children>
+            <Label prefHeight="42.0" prefWidth="133.0" text="Dataset file path:">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="pathTextField" prefHeight="42.0" prefWidth="468.0" text="C:\Users\Kuba\Desktop\TEMP_Studia\JwIiUM\Simple-Data-Analyzer\src\test\resources\knowndataset.csv" />
+         </children>
+      </HBox>
+      <Separator orientation="VERTICAL" prefHeight="24.0" prefWidth="600.0" />
+      <HBox prefHeight="31.0" prefWidth="600.0">
+         <children>
+            <Label prefHeight="52.0" prefWidth="69.0" text="Delimiter: " />
+            <TextField fx:id="delimiterTextField" prefHeight="52.0" prefWidth="59.0" text=";" />
+            <Separator prefHeight="52.0" prefWidth="132.0" />
+            <Label prefHeight="52.0" prefWidth="114.0" text="Timestamp index:" />
+            <TextField fx:id="timestampTextField" prefHeight="40.0" prefWidth="138.0" text="1" />
+            <Separator layoutX="136.0" layoutY="10.0" prefHeight="38.0" prefWidth="29.0" />
+            <CheckBox fx:id="labelsCheckBox" mnemonicParsing="false" prefHeight="52.0" prefWidth="128.0" selected="true" text="embedded labels" />
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#onClickLoadButton" prefHeight="31.0" prefWidth="600.0" text="Load">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
    </children>
-</AnchorPane>
+</VBox>
