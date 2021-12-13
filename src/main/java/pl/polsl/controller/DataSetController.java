@@ -30,7 +30,7 @@ public class DataSetController {
      */
     protected DataSetManipulator dataSetManipulator;
     /**
-     * Program window
+     * Program view
      */
     protected Stage stage;
 
@@ -49,16 +49,16 @@ public class DataSetController {
     /**
      * Stage setter.
      *
-     * @param stage Program window.
+     * @param stage Program view.
      */
     public void setStage(Stage stage) {
         this.stage = stage;
     }
 
     /**
-     * Method that switches active windows in program.
+     * Method that switches active views in program.
      *
-     * @param fxmlPath Path to fxml that contains next active window.
+     * @param fxmlPath Path to fxml that contains next active view.
      */
     protected void switchToScene(String fxmlPath) {
         FXMLLoader fxmlLoader = new FXMLLoader(DataSetAnalyzerApplication.class.getResource(fxmlPath));
@@ -85,11 +85,11 @@ public class DataSetController {
     }
 
     /**
-     * Method that shows a basic prompt and redirects user to next window.
+     * Method that shows a basic prompt and redirects user to next view.
      *
      * @param promptText Prompt text.
      * @param buttonText Button text.
-     * @param nextSceneFxml Path to next window fxml file.
+     * @param nextSceneFxml Path to next view fxml file.
      */
     protected void showPrompt(String promptText, String buttonText, String nextSceneFxml){
         FXMLLoader fxmlLoader = new FXMLLoader(DataSetAnalyzerApplication.class.getResource("prompt-view.fxml"));

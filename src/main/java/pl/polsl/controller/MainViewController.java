@@ -5,8 +5,6 @@ import javafx.scene.control.Button;
 import pl.polsl.model.DataSet;
 import pl.polsl.model.DataSetManipulator;
 
-import java.io.IOException;
-
 
 /**
  * Controller for main app view.
@@ -17,7 +15,7 @@ import java.io.IOException;
 public class MainViewController extends DataSetController {
 
     /**
-     * Button that redirects to statistics' window.
+     * Button that redirects to statistics' view.
      */
     @FXML
     private Button statisticsButton;
@@ -32,7 +30,7 @@ public class MainViewController extends DataSetController {
     }
 
     /**
-     * Method that switches window to dataset opening window.
+     * Method that switches view to dataset opening view.
      */
     @FXML
     public void onClickOpenDataSetButton() {
@@ -40,7 +38,7 @@ public class MainViewController extends DataSetController {
     }
 
     /**
-     * Method that switches window to statistics' window.
+     * Method that switches view to statistics' view.
      */
     @FXML
     public void onClickStatisticsButton(){

@@ -9,7 +9,7 @@ import java.io.IOException;
 
 
 /**
- * Controller for dataset opening window.
+ * Controller for dataset opening view.
  *
  * @version 1.2
  */

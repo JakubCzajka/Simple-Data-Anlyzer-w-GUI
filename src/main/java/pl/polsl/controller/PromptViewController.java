@@ -6,7 +6,7 @@ import javafx.scene.control.TextArea;
 
 
 /**
- * Controller for prompt window.
+ * Controller for prompt view.
  *
  * @version 1.2
  */
@@ -24,7 +24,7 @@ public class PromptViewController extends DataSetController {
     private Button promptButton;
 
     /**
-     * Path to fxml file containing next active window.
+     * Path to fxml file containing next active view.
      */
     private String nextSceneFxmlPath;
 
@@ -56,7 +56,7 @@ public class PromptViewController extends DataSetController {
     }
 
     /**
-     * Method that is executed after user presses the promptButton. Switches to window described in nextSceneFxmlPath.
+     * Method that is executed after user presses the promptButton. Switches to view described in nextSceneFxmlPath.
      */
     public void buttonPressed() {
         super.switchToScene(nextSceneFxmlPath);

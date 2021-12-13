@@ -22,7 +22,7 @@ import java.util.ResourceBundle;
 import java.util.Vector;
 
 /**
- * Controller for statistics' window.
+ * Controller for statistics' view.
  *
  * @version 1.2
  */
